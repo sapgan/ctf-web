@@ -67,7 +67,7 @@ $username = $_SESSION['username'];
 
          $title = $_POST["title"];
 
-         $db_name = "../movies/movies_".$username.".db";
+         $db_name = "../movies_".$username.".db";
 
          $db = new SQLite3($db_name);
 
