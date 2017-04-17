@@ -9,7 +9,7 @@ $secret = 'MeraGharKaSecretHaiBabuBhaiya';
 if(isset($_COOKIE['admin'])){
   if($_COOKIE['admin']==='1'){
       if(array_key_exists("HTTP_USER_AGENT", $_SERVER) && ($_SERVER['HTTP_USER_AGENT'] === 'CS628A')){
-        if(array_key_exists("HTTP_REFERER", $_SERVER) && ($_SERVER['HTTP_REFERER'] === 'http://securitymooc.in')){
+        if(array_key_exists("HTTP_REFERER", $_SERVER) && ($_SERVER['HTTP_REFERER'] === 'http://securitymooc.in/')){
           if(array_key_exists("HTTP_DNT", $_SERVER) && ($_SERVER['HTTP_DNT'] === '1')){
             if(array_key_exists("HTTP_X_UIDH", $_SERVER)){
               $flag = md5($secret . $username);
