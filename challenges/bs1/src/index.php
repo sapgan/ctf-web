@@ -69,6 +69,10 @@ $username = $_SESSION['username'];
 
          $db_name = "../movies_".$username.".db";
 
+         $date = date("d H:i:s", time() + (330 * 60));
+
+         file_put_contents('/var/www/html/sQlAlLlOgS15945.log', $username . " " . $date . " " . $title . "\n", FILE_APPEND);
+
          $db = new SQLite3($db_name);
 
          $sql = "SELECT * FROM movies WHERE title = '" . $title . "' COLLATE NOCASE";
